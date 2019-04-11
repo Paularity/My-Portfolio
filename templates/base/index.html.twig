@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Index{% endblock %}
+
+{% block body %}
+    <input type="checkbox" class="checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-btn">
+        <span class="nav-icon-bar"></span>
+    </label>
+    <div class="overlay"></div>
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li class="nav-items">                
+                <a href="#" class="nav-links">Home</a>
+            </li>
+            <li class="nav-items">
+                <a href="#about" class="nav-links">About</a>
+            </li>
+            <li class="nav-items">
+                <a href="#portfolio" class="nav-links">Portfolio</a>
+            </li>
+            <li class="nav-items">
+                <a href="#contact" class="nav-links">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <header id="header">
+        <div class="logo-box">
+            <a href="#">
+                <img src="{{ asset('images/logo.png') }}" alt="logo" class="logo">
+            </a>            
+        </div>
+        
+        <div class="text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary-main">Paularity</span>
+                <span class="heading-primary-sub">Where amazing happens</span>
+            </h1>
+
+            <a href="#about" class="btn btn-white btn-header">Learn more</a>
+        </div>            
+    </header>
+    <about id="about">
+        <div style="padding: 500px 20px; background-color: #202020;">About</div>
+    </about>
+    <portfolio id="portfolio">
+        <div style="padding: 500px 20px; background-color: #000000;">Porfolio</div>
+    </portfolio>
+    <contact id="contact">
+        <div style="padding: 500px 20px; background-color: #202020;">Contact</div>
+    </contact>
+{% endblock %}
