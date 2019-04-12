@@ -2,11 +2,12 @@
 
 {% block title %}Index{% endblock %}
 
-{% block body %}
-    <input type="checkbox" class="checkbox" id="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-btn">
+{% block body %}    
+
+    {# Navigation #}
+    <div class="btn nav-toggle-btn">
         <span class="nav-icon-bar"></span>
-    </label>
+    </div>
     <div class="overlay"></div>
     <nav class="main-nav">
         <ul class="nav-list">
@@ -22,31 +23,44 @@
             <li class="nav-items">
                 <a href="#contact" class="nav-links">Contact</a>
             </li>
+            <li class="nav-items">
+                <a href="https://www.facebook.com/DrmzLedSeriesK" target="_blank" class="nav-logo-links"><span><i class="fab fa-facebook"></i></span></a>
+                <a href="https://www.linkedin.com/in/paularity" target="_blank" class="nav-logo-links"><span><i class="fab fa-linkedin"></i></span></a>
+                <a href="https://github.com/zapaul33" target="_blank" class="nav-logo-links"><span><i class="fab fa-github"></i></span></a>
+                <a href="https://twitter.com/zapaul33" target="_blank" class="nav-logo-links"><span><i class="fab fa-twitter"></i></span></a>
+            </li>
         </ul>
     </nav>
+
+    {# Header #}
     <header id="header">
+        <div class="zoomInHeader"></div>  
         <div class="logo-box">
             <a href="#">
                 <img src="{{ asset('images/logo.png') }}" alt="logo" class="logo">
             </a>            
-        </div>
-        
+        </div>        
         <div class="text-box">
             <h1 class="heading-primary">
                 <span class="heading-primary-main">Paularity</span>
                 <span class="heading-primary-sub">Where amazing happens</span>
             </h1>
-
             <a href="#about" class="btn btn-white btn-header">Learn more</a>
-        </div>            
+        </div>                          
     </header>
-    <about id="about">
-        <div style="padding: 500px 20px; background-color: #202020;">About</div>
-    </about>
-    <portfolio id="portfolio">
-        <div style="padding: 500px 20px; background-color: #000000;">Porfolio</div>
-    </portfolio>
-    <contact id="contact">
-        <div style="padding: 500px 20px; background-color: #202020;">Contact</div>
-    </contact>
+
+    {# About #}
+    <div id="about">
+        <div>About</div>
+    </div>
+    
+    {# Portfolio #}
+    <div id="portfolio">
+        <div>Porfolio</div>
+    </div>
+
+    {# Contact #}
+    <div id="contact">
+        <div>Contact</div>
+    </div>
 {% endblock %}
