@@ -1,12 +1,13 @@
-// Menu
+// Menu Action when toggled
 function menuToggle(toggled, overlay, mainNav, iconBar) {   
-    if(toggled == false)
-    {
+    if(toggled == false) {
         $(overlay).css({ "transform" : "scale(80)" });        
         $(mainNav).css({             
             "opacity" : "1",
-            "width" : "100%", 
-        });
+            "width" : "100%",
+            "margin-left" : "0"
+        });        
+        $(mainNav).delay(800).css({ "display" : "block" });
         $(iconBar).css({ "background-color":"transparent" });
         $("body").append('<style>'+iconBar+':after{ top: 0; transform: rotate(135deg); }</style>');
         $("body").append('<style>'+iconBar+':before{ top: 0; transform: rotate(-135deg); }</style>');
@@ -15,7 +16,8 @@ function menuToggle(toggled, overlay, mainNav, iconBar) {
         $(overlay).css({ "transform" : "scale(1)" });        
         $(mainNav).css({ 
             "opacity" : "0",
-            "width" : "0",            
+            "width" : "0",
+            "margin-left" : "-300px"
         });              
         $(iconBar).css({ "background-color":"#333" });
         $("body").append('<style>'+iconBar+':after{ top: 15px; transform: rotate(0); }</style>');
@@ -23,8 +25,8 @@ function menuToggle(toggled, overlay, mainNav, iconBar) {
     }
 }
 
-function menuDisplay()
-{
+// Initialize menu display
+function menuDisplay() {
     var toggled = false;
     var overlay = ".overlay";
     var mainNav = ".main-nav";
@@ -34,10 +36,10 @@ function menuDisplay()
         menuToggle(toggled, overlay, mainNav, iconBar);
         toggled = !toggled;
     });   
+
     $('.nav-links').click(function (e) { 
         menuToggle(toggled, overlay, mainNav, iconBar);
         toggled = !toggled;
     });
 
 } menuDisplay();
-
