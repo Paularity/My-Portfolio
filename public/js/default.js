@@ -1,3 +1,5 @@
+AOS.init();
+
 // Menu Action when toggled
 function menuToggle(toggled, overlay, mainNav, iconBar) {   
     if(toggled == false) {
@@ -27,10 +29,10 @@ function menuToggle(toggled, overlay, mainNav, iconBar) {
 
 // Initialize menu display
 function menuDisplay() {
-    var toggled = false;
-    var overlay = ".overlay";
-    var mainNav = ".main-nav";
-    var iconBar = ".nav-toggle-btn .nav-icon-bar";     
+    var toggled = false,
+        overlay = ".overlay",
+        mainNav = ".main-nav",
+        iconBar = ".nav-toggle-btn .nav-icon-bar";     
   
     $('.nav-toggle-btn').click(function (e) { 
         menuToggle(toggled, overlay, mainNav, iconBar);
@@ -43,3 +45,7 @@ function menuDisplay() {
     });
 
 } menuDisplay();
+
+function navigateSection(section) {
+    // $( '#' + section ).animatescroll({scrollSpeed:100,easing:'easeOutBounce'});
+}

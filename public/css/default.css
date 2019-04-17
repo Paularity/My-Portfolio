@@ -18,8 +18,16 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
-    color: #777;
+    color: #cccccc;
 }
+
+.pad-0 { padding: 0 !important; }
+.pad-10 { padding: 10px !important; }
+.pad-20 { padding: 20px !important; }
+
+.mar-0 { margin: 0 !important; }
+.mar-10 { margin: 10px !important; }
+.mar-20 { margin: 20px !important; }
 
 #header {
     position: relative;
@@ -35,7 +43,7 @@ body {
     background-size: cover;
     background-position: top;
     background-attachment: fixed;     
-    -webkit-animation: zoomin 30s ease-in infinite;
+    -webkit-animation: zoomIn 30s ease-in infinite;
     animation: zoomIn 30s ease-in infinite;        
 }
 
@@ -260,6 +268,7 @@ body {
     z-index: 1500;
     opacity: 0;
     width: 0;
+    margin-left: -300px;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -361,16 +370,6 @@ body {
 .nav-icon-bar::after {
     top: 0.8rem;
 }
-
-/* .nav-toggle-btn:hover
-.nav-icon-bar::before {
-    top: -1rem;
-}
-
-.nav-toggle-btn:hover
-.nav-icon-bar::after {
-    top: 1rem;
-} */
 
 
 
