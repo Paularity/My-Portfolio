@@ -392,7 +392,8 @@ body {
 .card-layout {
     background-color: #fff;
     color: #000;
-    width: 300px;
+    max-width: 500px;
+    width: 100%;
     padding: 50px 30px;
     border-radius: 10px;    
     cursor: pointer;
