@@ -45,7 +45,3 @@ function menuDisplay() {
     });
 
 } menuDisplay();
-
-function navigateSection(section) {
-    // $( '#' + section ).animatescroll({scrollSpeed:100,easing:'easeOutBounce'});
-}
