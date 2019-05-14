@@ -96,9 +96,9 @@ body {
 
 .heading-primary-main {
     display: block;
-    font-size: 60px;
+    font-size: calc(2vw + 1em);
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3vw;
 
     animation-name: moveInLeft;
     animation-duration: 1s;    
@@ -109,9 +109,9 @@ body {
 
 .heading-primary-sub {
     display: block;
-    font-size: 20px;
+    font-size: calc(1vw + 15%);
     font-weight: 100;
-    letter-spacing: 25px;
+    letter-spacing: 15px;
 
     animation-name: moveInRight;
     animation-duration: 1s;
@@ -418,5 +418,9 @@ body {
 }
 
 .card-description {
+    text-align: center;
+}
+
+.text-center {
     text-align: center;
 }

@@ -24,7 +24,7 @@
                 <a href="#contact" class="nav-links">Contact</a>
             </li>
             <li class="nav-items">
-                <a href="https://www.facebook.com/DrmzLedSeriesK" target="_blank" class="nav-logo-links"><span><i class="fab fa-facebook"></i></span></a>
+                <a href="https://www.facebook.com/paularityDev/?modal=admin_todo_tour" target="_blank" class="nav-logo-links"><span><i class="fab fa-facebook"></i></span></a>
                 <a href="https://www.linkedin.com/in/paularity" target="_blank" class="nav-logo-links"><span><i class="fab fa-linkedin"></i></span></a>
                 <a href="https://github.com/zapaul33" target="_blank" class="nav-logo-links"><span><i class="fab fa-github"></i></span></a>
                 <a href="https://twitter.com/zapaul33" target="_blank" class="nav-logo-links"><span><i class="fab fa-twitter"></i></span></a>
@@ -43,7 +43,7 @@
         <div class="text-box">
             <h1 class="heading-primary">
                 <span class="heading-primary-main">Paularity</span>
-                <span class="heading-primary-sub">Where amazing happens</span>
+                <span class="heading-primary-sub">Push your boundaries</span>
             </h1>
             <a href="#about" class="btn btn-white btn-header">Learn more</a>
         </div>                          
@@ -51,36 +51,55 @@
 
     {# About #}
     <div id="about" class="pad-20">
-        <h1 style="margin-top: 100px;" data-aos="fade-in" data-aos-delay="200">Hi, I’m Christian,</h1>
-        <h3 data-aos="fade-in" data-aos-delay="500">I am a web developer who loves formulating new ideas and having fun designing, developing, and building beautiful websites and application for over 3 years from now. Have a project or idea in your mind? Let’s build it together now!</h3>                
-        <div class="d-flex flex-row flex-wrap justify-content-center mt-5">
-            <div class="card-layout mar-10" data-aos="flip-left" data-aos-delay="800">
-                <div class="card-icon"><span><i class="fas fa-pencil-ruler"></i></span></div>
-                <div class="card-heading">Front-end Developer</div>
-                <div class="card-description">CSS3, HTML5, Symfony2, ReactJS, Laravel, Wordpress, Angular, Bootstrap, Jquery, SASS, LESS, MaterializeCSS, Responsiveness, UX, UI</div>
+        <div class="row">
+            <div class="col-12">
+                <h1 style="margin-top: 100px;" data-aos="fade-in" data-aos-delay="200">Hi, I’m Christian,</h1>
+                <h3 data-aos="fade-in" data-aos-delay="500">I am a web developer who loves formulating new ideas and having fun designing, developing, and building beautiful websites and application for over 3 years from now. Have a project or idea in your mind? Let’s build it together now!</h3>                
             </div>
-            <div style="width: 20px; height: 20px;"></div>
-            <div class="card-layout mar-10" data-aos="flip-down" data-aos-delay="1100">
-                <div class="card-icon"><span><i class="fas fa-code"></i></span></div>
-                <div class="card-heading">Back-end Developer</div>
-                <div class="card-description">PHP, Javascript, Java, MySQL, NoSQL, MonggoDB, SOLID Principle, NodeJS, ExpressJS, Software Design Patterns, Redux, RxJava, Retrofit, RESTful API, Dagger 2, Butterknife, SOLID Principle, Software Design Patterns</div>
-            </div>
-            <div style="width: 20px; height: 20px;"></div>
-            <div class="card-layout mar-10" data-aos="flip-right" data-aos-delay="1300">
-                <div class="card-icon"><span><i class="fas fa-tools"></i></span></div>
-                <div class="card-heading">Tools</div>
-                <div class="card-description">Vscode, Git, Github, Gitlab, JIRA, Terminal, Adobe Photoshop & Illustrator, Filezilla, Android Studio, Eclipse Oxygen, SVN, XAMPP</div>
-            </div>
+        </div>        
+        <div class="row justify-content-center mt-5">
+            {% for skill in skills %}
+                    <div class="card-layout mar-10" data-aos="flip-down" data-aos-delay="1000">
+                        <div class="card-icon"><span><i class="fas fa-{{skill.icon}}"></i></span></div>
+                        <div class="card-heading">{{skill.title}}</div>
+                        <div class="card-description">{{skill.description}}</div>
+                    </div>                        
+            {% endfor %}
         </div>
     </div>
     
     {# Portfolio #}
-    <div id="portfolio" class="pad-20">
+    <div id="portfolio" class="pad-20 text-center">
         <h1 data-aos="fade-in" data-aos-delay="200">Portfolio</h1>
+        <div class="row justify-content-center mt-5">
+            {% for project in projects %}
+                <div class="card-layout mar-10" data-aos="fade-in">
+                    <div class="card-icon"><span><i class="fas fa-folder"></i></span></div>
+                    <div class="card-heading">{{project.title}}</div>
+                    <div class="card-description">{{project.description}}</div>
+                </div> 
+            {% endfor %}
+        </div>        
     </div>
 
     {# Contact #}
-    <div id="contact" class="pad-20">
-        <h1 data-aos="fade-in" data-aos-delay="200">Contact</h1>
+    <div id="contact" class="pad-20">        
+        <form action="" method="post">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h1 data-aos="slide-right" data-aos-delay="200">Get in Touch</h1>
+                </div>    
+                <div class="col-12 text-center">
+                    <input type="name" value="" name="name" placeholder="Enter Name..." />
+                    <input type="email" value="" name="email" placeholder="Enter Email Address..." />
+                </div>            
+                <div class="col-12 text-center">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>    
+                <div class="col-12 text-center">
+                    <input class="btn btn-white" type="submit" value="Submit">
+                </div>    
+            </div>
+        </form>        
     </div>
 {% endblock %}
