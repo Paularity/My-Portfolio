@@ -83,21 +83,22 @@
     </div>
 
     {# Contact #}
-    <div id="contact" class="pad-20">        
-        <form action="" method="post">
-            <div class="row justify-content-center">
+    <div id="contact" class="pad-20 d-flex justify-content-center">        
+        <form action="" method="post" id="contact-form">            
                 <div class="col-12 text-center">
                     <h1 data-aos="slide-right" data-aos-delay="200">Get in Touch</h1>
+                </div>                              
+                <div class="col-12 text-center mt-2">
+                    <input class="input-text" type="name" value="" name="name" placeholder="Enter Name..." />
+                </div>
+                <div class="col-12 text-center mt-2">                                   
+                    <input class="input-text" type="email" value="" name="email" placeholder="Enter Email Address..." />
+                </div>  
+                <div class="col-12 text-center mt-4">
+                    <textarea class="input-textarea" name="" id="" cols="30" rows="10" placeholder="Enter Message here..."></textarea>
                 </div>    
-                <div class="col-12 text-center">
-                    <input type="name" value="" name="name" placeholder="Enter Name..." />
-                    <input type="email" value="" name="email" placeholder="Enter Email Address..." />
-                </div>            
-                <div class="col-12 text-center">
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>    
-                <div class="col-12 text-center">
-                    <input class="btn btn-white" type="submit" value="Submit">
+                <div class="col-12 mt-2 d-flex justify-content-end">
+                    <a href="#contact" class="btn btn-white btn-header">Send</a>
                 </div>    
             </div>
         </form>        
